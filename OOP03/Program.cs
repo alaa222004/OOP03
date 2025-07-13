@@ -131,6 +131,23 @@ namespace OOP03
                 }
             }
             #endregion
+
+            #region Q2 p2
+           public class person
+            {
+                public string fname { get; set; }
+                public string lname { set; get; }
+
+                public override string ToString()
+                {
+                    return $"{fname}{lname}";
+                }
+                public override int GetHashCode()
+                {
+                    return HashCode.Combine(fname,lname);
+                }
+            }
+            #endregion
             internal class Program
             {
                 static void Main()
