@@ -110,6 +110,27 @@ namespace OOP03
                 }
             }
             #endregion
+
+            #region Q1 p2
+            public class duration
+            {
+                public double sec { set; get; }
+                public double min { set; get; }
+                public double hour { set; get; }
+
+                public duration(double s, double m, double h)
+                {
+                    sec = s;
+                    min = m;
+                    hour = h;
+                }
+
+                public void Display()
+                {
+                    Console.WriteLine($"{hour}h {min}m {sec}s");
+                }
+            }
+            #endregion
             internal class Program
             {
                 static void Main()
@@ -130,6 +151,11 @@ namespace OOP03
 
                     DerivedClass2 e=new DerivedClass2();
                     e.DisplayMessage();
+                    #endregion
+
+                    #region Q1 p2
+                    duration t=new duration(2,4,6);
+                    t.Display();
                     #endregion
                 }
             }
