@@ -1,12 +1,33 @@
 ﻿using System;
 
 namespace OOP03
+
+
 {
-    internal class Program
+    #region Q1
+    public class Calculator
     {
-        static void Main(string[] args)
+        static int plusoprator(int x, int y)
         {
-            Console.WriteLine("Hello World!");
+            return x + y;
+        }
+        static int plusoprator(int x, int y, int z)
+        {
+            return x + y + z;
+        }
+        static double plusoprator(double x, double y, double z)
+        {
+            return x + y + z;
+        }
+        #endregion
+
+      
+        internal class Program
+        {
+            static void Main()
+            {
+
+            }
         }
     }
 }
