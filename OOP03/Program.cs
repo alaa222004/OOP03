@@ -148,7 +148,31 @@ namespace OOP03
                 }
             }
             #endregion
-            internal class Program
+
+            #region Q3 p2
+            public class Duration2
+            {
+                public int Hours { get; private set; }
+                public int Minutes { get; private set; }
+                public int Seconds { get; private set; }
+
+                public Duration2(int hours, int minutes, int seconds)
+                {
+                    Hours = hours;
+                    Minutes = minutes;
+                    Seconds = seconds;
+                }
+
+            
+                public Duration2(int totalSeconds)
+                {
+                    Hours = totalSeconds / 3600;
+                    totalSeconds %= 3600;
+                    Minutes = totalSeconds / 60;
+                    Seconds = totalSeconds % 60;
+                }
+                #endregion
+                internal class Program
             {
                 static void Main()
                 {
