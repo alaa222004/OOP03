@@ -44,12 +44,36 @@ namespace OOP03
             }
         }
         #endregion
-        internal class Program
-        {
-            static void Main()
-            {
 
+        #region Q3
+        public class complex
+        {
+            public int Real { set; get; }
+            public int Imagein { set; get; }
+
+            public complex(int real, int imagein)
+            {
+                Real = real;
+                Imagein = imagein;
+
+            }
+           public static complex operator +(complex c1,complex c2)
+            {
+                return new complex(c1.Real + c2.Real, c1.Imagein + c2.Imagein);
+            }
+            public static complex operator -(complex c1, complex c2)
+            {
+                return new complex(c1.Real - c2.Real, c1.Imagein - c2.Imagein);
+            }
+        }
+            #endregion
+            internal class Program
+            {
+                static void Main()
+                {
+
+                }
             }
         }
     }
-}
+
