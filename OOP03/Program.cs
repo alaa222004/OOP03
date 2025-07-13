@@ -57,7 +57,7 @@ namespace OOP03
                 Imagein = imagein;
 
             }
-           public static complex operator +(complex c1,complex c2)
+            public static complex operator +(complex c1, complex c2)
             {
                 return new complex(c1.Real + c2.Real, c1.Imagein + c2.Imagein);
             }
@@ -66,14 +66,38 @@ namespace OOP03
                 return new complex(c1.Real - c2.Real, c1.Imagein - c2.Imagein);
             }
         }
+        #endregion
+
+        #region Q4
+        public class Employee
+        {
+            public virtual void work()
+            {
+                 Console.WriteLine("Employee is  working");
+
+            }
+            public class Manager : Employee
+            {
+                 public override void work()
+                {
+                    Console.WriteLine("Manager is managing");
+
+                }
+            }
             #endregion
             internal class Program
             {
                 static void Main()
                 {
-
+                    #region Q4
+                    Employee emp = new Employee();
+                    emp.work();
+                    Manager mgr = new Manager();
+                    mgr.work();
+                    #endregion
                 }
             }
         }
     }
+}
 
