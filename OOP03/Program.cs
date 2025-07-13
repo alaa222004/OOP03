@@ -21,7 +21,29 @@ namespace OOP03
         }
         #endregion
 
-      
+        #region Q2
+        public class Rectangle
+        {
+            public int width { get; set; }
+            public int height { get; set; }
+            public Rectangle()
+            {
+                width = 0;
+                height = 0;
+
+            }
+            public Rectangle(int w, int h)
+            {
+                w = width;
+                h = height;
+            }
+            public Rectangle(int x)
+            {
+                x = height;
+                x = width;
+            }
+        }
+        #endregion
         internal class Program
         {
             static void Main()
