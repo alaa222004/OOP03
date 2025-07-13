@@ -85,6 +85,31 @@ namespace OOP03
                 }
             }
             #endregion
+            #region Q5 
+            public class BaseClass
+            {
+                public virtual void DisplayMessage()
+                {
+                    Console.WriteLine("Message from BaseClass");
+                }
+
+            }
+            public class DerivedClass1 : BaseClass
+            {
+                public override void DisplayMessage()
+                {
+                    Console.WriteLine("Message DerivedClass");
+                }
+
+            }
+            public class DerivedClass2 :BaseClass
+            {
+                public override void DisplayMessage()
+                {
+                    Console.WriteLine("Message DerivedClass2");
+                }
+            }
+            #endregion
             internal class Program
             {
                 static void Main()
@@ -94,6 +119,17 @@ namespace OOP03
                     emp.work();
                     Manager mgr = new Manager();
                     mgr.work();
+                    #endregion
+
+                    #region Q5
+                    BaseClass b=new BaseClass();
+                    b.DisplayMessage();
+
+                    DerivedClass1 d=new DerivedClass1();
+                    d.DisplayMessage();
+
+                    DerivedClass2 e=new DerivedClass2();
+                    e.DisplayMessage();
                     #endregion
                 }
             }
